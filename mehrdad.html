@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>مهرسام</title>
+
+    <!-- فونت وزیر -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/webfonts/Vazirmatn-Variable.woff2" rel="stylesheet">
+
+    <!-- iOS meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="مهرسام">
+
+    <!-- Android meta tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#146b38">
+
+    <!-- لینک به فایل منیفست -->
+    <link rel="manifest" href="arshiya-mani.json">
+
+    <!-- آیکون ها -->
+    <link rel="icon" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png">
+
+    <style>
+        /* --- ULTRA PRO UI --- */
+        body {
+        margin: 0;
+        padding: 0;
+        direction: rtl;
+        font-family: "Vazirmatn", sans-serif;
+        background: linear-gradient(135deg, #0f2f13, #0b3d24, #146b38);
+        background-size: 300% 300%;
+        animation: bgMove 12s ease infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+
+        /* انیمیشن گرادیانت */
+        @keyframes bgMove {
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+        }
+
+        /* کانتینر گلس‌مورفیک 3D */
+        .container {
+        width: 500px; /* بزرگتر */
+        text-align: center;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(18px) brightness(1.3);
+        -webkit-backdrop-filter: blur(18px) brightness(1.3);
+        padding: 70px 50px; /* padding بزرگتر */
+        border-radius: 30px;
+        border: 1px solid rgba(255,255,255,0.25);
+        box-shadow:
+        0px 25px 40px rgba(0,0,0,0.45),
+        inset 0px 0px 15px rgba(255,255,255,0.25);
+        position: relative;
+        overflow: hidden;
+        animation: fadeIn 0.9s ease;
+        }
+
+        /* افکت نور اسلاید */
+        .container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -120%;
+        width: 80%;
+        height: 100%;
+        background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+        transform: skewX(-20deg);
+        animation: lightSweep 4.8s infinite;
+        }
+
+        @keyframes lightSweep {
+        0% {left: -120%;}
+        50% {left: 140%;}
+        100% {left: 140%;}
+        }
+
+        @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(25px);}
+        to {opacity: 1; transform: translateY(0);}
+        }
+
+        /* نمایش نام */
+        .info {
+        margin-bottom: 40px;
+        font-size: 36px; /* بزرگتر */
+        font-weight: bold;
+        color: #eaffea;
+        text-shadow: 0 3px 15px rgba(0, 255, 120, 0.35);
+        }
+
+        /* دکمه‌های نئومورفیک با Glow */
+        button {
+        width: 100%;
+        margin-top: 22px;
+        background: #eaffea;
+        color: #145726;
+        padding: 20px 0; /* بزرگتر */
+        font-size: 24px; /* بزرگتر */
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer;
+        transition: 0.25s ease;
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+        0px 6px 15px rgba(0,0,0,0.25),
+        inset 0px 0px 10px rgba(60,255,120,0.25);
+        }
+
+        /* افکت نور روی دکمه */
+        button::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -120%;
+        width: 70%;
+        height: 100%;
+        background: linear-gradient(115deg, transparent, rgba(255,255,255,0.5), transparent);
+        transform: skewX(-25deg);
+        transition: 0.4s;
+        }
+
+        button:hover::after {
+        left: 130%;
+        }
+
+        /* هاور دکمه */
+        button:hover {
+        background: #ffffff;
+        transform: translateY(-4px);
+        box-shadow:
+        0px 10px 25px rgba(0,0,0,0.35),
+        0 0 22px rgba(0,255,140,0.4);
+        }
+
+        /* کلیک */
+        button:active {
+        transform: scale(0.96);
+        }
+
+        /* ریسپانسیو */
+        @media (max-width: 550px) {
+        .container {
+        width: 95%;
+        padding: 60px 25px;
+        }
+        button {
+        font-size: 20px;
+        padding: 18px 0;
+        }
+        .info {
+        font-size: 28px;
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="info">Mehrdad Yahyavi</div>
+
+    <!-- فرم ورود -->
+    <form id="apiForm" action="https://99810-n6nhs.irann8n.com/webhook/b569291d-1ccd-4f4f-b1f7-e038f3e68219" method="POST">
+        <input type="hidden" name="value" id="hiddenValue" value="2">
+        <input type="hidden" name="vorod" id="mmd" value="1">
+        <button type="submit">ثبت ورود</button>
+    </form>
+
+    <!-- فرم خروج -->
+    <form id="apiForm" action="https://99810-n6nhs.irann8n.com/webhook/b569291d-1ccd-4f4f-b1f7-e038f3e68219" method="POST">
+        <input type="hidden" name="value" id="hiddenValue1" value="2">
+        <input type="hidden" name="vorod" id="asghar" value="-1">
+        <button type="submit">ثبت خروج</button>
+    </form>
+</div>
+
+</body>
+</html>
+
